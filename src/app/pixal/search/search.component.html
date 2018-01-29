@@ -1,0 +1,11 @@
+<form #f='ngForm' (ngSubmit)='onSubmit(f)'>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search..." name='searchInput' ngModel>
+    <span class="input-group-btn">
+      <input class="btn btn-default" type="submit" value=Search!>
+    </span>
+  </div><!-- /input-group -->
+</form>
+<div class="row" *ngIf='!Searching'>
+  <app-photolist [Photos]='photos' [searching]='Searching'></app-photolist>
+</div>

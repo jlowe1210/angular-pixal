@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div class='container section'>
+  <router-outlet></router-outlet>
+  <div *ngIf='isSearching' [ngStyle]="{'marginTop': '30px', 'textAlign': 'center'}">
+    <img src='../../../assets/images/6.gif'>
+  </div>
+</div>

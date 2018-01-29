@@ -1,0 +1,14 @@
+<div class="row space" *ngIf='!searching'>
+  <div class="col-sm photo-box" *ngFor='let pic of Photos'>
+      <div class="card" style="width: 20rem;">
+          <img class="card-img-top" height='250px' [src]='pic.webformatURL'
+          alt="Card image cap">
+          <div class="card-block idk">
+            <a [routerLink]="['/photo', pic.id]">View Photo</a>
+            <p>Likes: {{pic.likes}}</p>
+            <p>Favorites: {{pic.favorites}}</p>
+            <p>Tags: {{pic.tags}}</p>
+          </div>
+        </div>
+  </div>
+</div>
